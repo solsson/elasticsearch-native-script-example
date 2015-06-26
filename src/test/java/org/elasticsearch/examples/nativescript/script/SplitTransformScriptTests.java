@@ -22,9 +22,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.elasticsearch.index.query.FilterBuilders.termFilter;
-import static org.elasticsearch.index.query.QueryBuilders.filteredQuery;
-import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
+//import static org.elasticsearch.index.query.FilterBuilders.termFilter;
+//import static org.elasticsearch.index.query.QueryBuilders.filteredQuery;
+//import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
 import static org.elasticsearch.test.hamcrest.ElasticsearchAssertions.*;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -100,13 +100,13 @@ public class SplitTransformScriptTests extends AbstractSearchScriptTests {
         // test comma (default) delimiter
         for (int i = 0; i < 105; i++) {
             ListenableActionFuture<SearchResponse> commaFuture = client().prepareSearch("test")
-                    .setQuery(filteredQuery(matchAllQuery(), termFilter("strcomma", Integer.toString(i))))
+                    .setQuery("*:*"/*filteredQuery(matchAllQuery(), termFilter("strcomma", Integer.toString(i)))*/)
                     .addFields("strcomma", "num")
                     .setSize(105)
                     .execute();
 
             ListenableActionFuture<SearchResponse> dashFuture = client().prepareSearch("test")
-                    .setQuery(filteredQuery(matchAllQuery(), termFilter("strdash", Integer.toString(i))))
+                    .setQuery("*:*"/*filteredQuery(matchAllQuery(), termFilter("strdash", Integer.toString(i)))*/)
                     .addFields("strdash", "num")
                     .setSize(105)
                     .execute();
