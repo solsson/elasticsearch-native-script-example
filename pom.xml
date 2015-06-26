@@ -38,8 +38,8 @@
     <!-- The Elasticsearch version that the project will be built with -->
     <!-- ============================================================= -->
     <properties>
-        <elasticsearch.version>1.4.0</elasticsearch.version>
-        <lucene.version>4.10.2</lucene.version>
+        <elasticsearch.version>1.6.0</elasticsearch.version>
+        <lucene.version>4.10.4</lucene.version>
     </properties>
 
     <!-- ============================================================= -->
@@ -47,21 +47,21 @@
     <!-- project needs that the project will be built with             -->
     <!-- ============================================================= -->
     <dependencies>
-    
+
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-test-framework</artifactId>
             <version>${lucene.version}</version>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
             <version>${elasticsearch.version}</version>
             <scope>compile</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
@@ -98,7 +98,7 @@
             <version>2.1.10</version>
             <scope>test</scope>
         </dependency>
-           
+
     </dependencies>
 
     <build>
