@@ -3,12 +3,13 @@ package org.elasticsearch.examples.nativescript.script;
 
 import org.elasticsearch.common.Nullable;
 import org.elasticsearch.common.Strings;
-import org.elasticsearch.common.collect.Maps;
 import org.elasticsearch.common.xcontent.support.XContentMapValues;
 import org.elasticsearch.script.AbstractExecutableScript;
 import org.elasticsearch.script.ExecutableScript;
 import org.elasticsearch.script.NativeScriptFactory;
 import org.elasticsearch.script.ScriptException;
+
+import com.google.common.collect.Maps;
 
 import java.util.Map;
 
